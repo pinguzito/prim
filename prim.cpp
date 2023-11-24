@@ -109,18 +109,9 @@ void printAGM(grafo G, int pos){
         for(int j = 0; j < Adj.size(); j++)
         {
             if(Adj.at(j).pai == G.vertices.at(i).valor)
-            {
-                // cout << "Adicionada: ";
-                // cout << arestaUV(G.arestas, G.vertices.at(i), Adj.at(j)).v1 << " " << arestaUV(G.arestas, G.vertices.at(i), Adj.at(j)).v2 << " " << arestaUV(G.arestas, G.vertices.at(i), Adj.at(j)).peso << "\n";
+            {             
                 ArvGenMin.push_back(arestaUV(G.arestas, G.vertices.at(i), Adj.at(j)));
             }
-            /*else
-            {
-                cout << "Rejeitada: ";
-                cout << arestaUV(G.arestas, G.vertices.at(i), Adj.at(j)).v1 << " " << arestaUV(G.arestas, G.vertices.at(i), Adj.at(j)).v2 << " " << arestaUV(G.arestas, G.vertices.at(i), Adj.at(j)).peso << "\n";
-                cout << "Vadj valor: " << Adj.at(j).valor << " | Vatual valor: " << G.vertices.at(i).valor << "\n";
-                cout << "Vadj pai: " << Adj.at(j).pai << "\n";
-            }*/
         }
     }
 
@@ -174,10 +165,6 @@ void prim(grafo G, int pos){
             }
         }
     }
-
-    /*for(int i = 0; i < G.vertices.size(); i++){
-         cout << "V: " << G.vertices.at(i).valor << " | Chave: " << G.vertices.at(i).chave << " | Pai: " << G.vertices.at(i).chave << "\n";
-    }*/
     printAGM(G, pos);
 }
 
@@ -190,16 +177,6 @@ int matriz[][N] = {{0, 4, 0, 0, 0, 0, 0, 0, 8},
                    {0, 0, 0, 0, 0, 0, 0, 6, 1},
                    {0, 0, 0, 0, 0, 0, 0, 0, 7},
                    {0, 0, 0, 0, 0, 0, 0, 0, 0}};
-
-/*
-int matriz[][N]={{0,1,0,4,0,0,0},       12 23 34 36 38 45 67 79
-                 {0,0,2,6,4,0,0},
-                 {0,0,0,0,5,6,0},
-                 {0,0,0,0,3,0,4},
-                 {0,0,0,0,0,8,7},
-                 {0,0,0,0,0,0,3},
-                 {0,0,0,0,0,0,0}};
-*/
 
 int main(){
 
